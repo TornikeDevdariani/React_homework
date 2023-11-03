@@ -1,0 +1,21 @@
+.signInFormDiv input {
+  font-weight: bold;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 2px;
+  border-color: rgb(12, 163, 163);
+  margin: 10px;
+}
+.signInFormDiv input:hover {
+  scale: 1.1;
+  transition-duration: 0.4s;
+  text-shadow: 0px 0px 2px;
+}
+.signInFormDiv input::placeholder {
+  color: rgba(223, 222, 220, 0.747);
+}
+.signInFormDiv input:focus {
+  border: none;
+}

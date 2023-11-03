@@ -1,0 +1,12 @@
+.movieCard {
+  border: solid 0.02cm;
+  border-radius: 10px;
+  border-color: rgb(12, 163, 163);
+  color: rgb(12, 163, 163);
+  width: 300px;
+  margin: 20px;
+}
+
+.movieCard:hover {
+  scale: 1.04;
+}

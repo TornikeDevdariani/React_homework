@@ -1,0 +1,50 @@
+.leftNav {
+  margin-top: 5px;
+}
+.leftNav button:hover {
+  scale: 1.05;
+  transition-duration: 0.5s;
+}
+.leftNav button {
+  font-size: medium;
+}
+.nav button {
+  border: none;
+  background: none;
+  padding-left: 20px;
+  color: rgb(12, 163, 163);
+  text-shadow: 0px 0px 5px;
+}
+.nav button:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 20px;
+}
+nav {
+  color: rgb(12, 163, 163);
+}
+
+.nav {
+  justify-content: space-between;
+  display: flex;
+  padding-top: 15px;
+}
+.rightnav button {
+  margin-right: 10px;
+  padding: 10px;
+  color: rgb(12, 163, 163);
+  border: 0.01cm solid;
+  border-radius: 20px;
+  margin-left: 10px;
+  background-color: rgba(68, 67, 67, 0.377);
+}
+.rightnav button:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 15px;
+}
+.navline {
+  box-shadow: 0px 2px 6px;
+}
+.leftNav button {
+  border-bottom: solid 2px;
+  margin-left: 20px;
+}
