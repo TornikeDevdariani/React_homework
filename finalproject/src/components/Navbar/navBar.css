@@ -21,6 +21,14 @@
 }
 nav {
   color: rgb(12, 163, 163);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(33, 33, 36);
+  border-bottom: solid 2px;
+  border-color: rgb(12, 163, 163);
+  box-shadow: 0px 0px 10px;
 }
 
 .nav {
@@ -37,13 +45,22 @@ nav {
   margin-left: 10px;
   background-color: rgba(68, 67, 67, 0.377);
 }
+.SignOutButton {
+  height: 35px;
+}
 .rightnav button:hover {
   scale: 1.05;
   box-shadow: 0px 0px 15px;
 }
-.navline {
+/* .navline {
   box-shadow: 0px 2px 6px;
-}
+  margin-top: 10px;
+  background-color: rgb(12, 163, 163);
+  width: 95%;
+  height: 2px;
+  margin-right: auto;
+  margin-left: auto;
+} */
 .leftNav button {
   border-bottom: solid 2px;
   margin-left: 20px;

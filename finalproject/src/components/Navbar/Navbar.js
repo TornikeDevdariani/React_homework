@@ -11,7 +11,7 @@ const Navbar = () => {
     dispatch,
   } = useAppContext();
   return (
-    <nav style={{ position: "relative", zIndex: "999" }}>
+    <nav>
       <div className="nav">
         <div className="leftNav">
           <button
@@ -72,17 +72,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div
-        className="navline"
-        style={{
-          marginTop: "10px",
-          backgroundColor: "rgb(12, 163, 163)",
-          width: "95%",
-          height: "2px",
-          marginRight: "auto",
-          marginLeft: "auto",
-        }}
-      ></div>
+      <div className="navline"></div>
     </nav>
   );
 };
