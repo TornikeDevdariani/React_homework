@@ -16,7 +16,7 @@ const Movies = () => {
     fetchMovies()
       .then((result) => {
         setMoviesData(result);
-        console.log(result);
+        // console.log(result);
       })
       .catch((err) => {
         setError(err.message);
@@ -28,13 +28,18 @@ const Movies = () => {
 
   return (
     <div>
-      <div>
+      <div className="moviesBody">
         <h1>Movies for you {user.userName}</h1>
-        {/* <pre>{JSON.stringify(result, null, 2)}</pre> */}
+
         <div className="movieCardDiv">
           <div className="Loader">
             {isLoading && (
-              <BarLoader color="#36d7b7" speedMultiplier={0.5} width={300} />
+              <BarLoader
+                id="exactLoader"
+                color="#36d7b7"
+                speedMultiplier={0.5}
+                width={300}
+              />
             )}
           </div>
           {moviesData &&

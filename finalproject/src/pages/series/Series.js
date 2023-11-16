@@ -3,7 +3,7 @@ import { fetchSeries } from "../../api/seriesApi";
 import { BarLoader } from "react-spinners";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { useAppContext } from "../../context/AppContextProvider";
-
+import "./series.css";
 const Series = () => {
   const {
     state: { isUserLogged, user },
@@ -16,7 +16,6 @@ const Series = () => {
     fetchSeries()
       .then((result) => {
         setSeriesData(result);
-        console.log(result);
       })
       .catch((err) => {
         setError(err.message);
@@ -34,7 +33,12 @@ const Series = () => {
         <div className="movieCardDiv">
           <div className="Loader">
             {isLoading && (
-              <BarLoader color="#36d7b7" speedMultiplier={0.5} width={300} />
+              <BarLoader
+                id="exactLoader"
+                color="#36d7b7"
+                speedMultiplier={0.5}
+                width={300}
+              />
             )}
           </div>
           {seriesData &&

@@ -5,9 +5,13 @@ import React, {
   useMemo,
   useReducer,
 } from "react";
-import { appContextReducer, initialState } from "./reducer";
-import { signInAction } from "./action-creators";
+import {
+  appContextReducer,
+  initialState,
+} from "./appContextReducer/appReducer/reducer";
+import { signInAction } from "./appContextReducer/actions/action-creators";
 import { validToken } from "../utils";
+import { fetchMovies } from "../api/moviesApi";
 const appContext = createContext();
 const AppContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appContextReducer, initialState);

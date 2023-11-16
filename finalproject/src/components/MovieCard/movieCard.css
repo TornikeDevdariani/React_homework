@@ -1,13 +1,13 @@
 .movieCard {
-  border: solid 0.02cm;
-  border-radius: 10px;
-  border-color: rgb(12, 163, 163);
-  color: rgb(12, 163, 163);
+  color: #002661;
   width: 300px;
   margin: 20px;
+  background-image: linear-gradient(135deg, #92ffc0 10%, #002661 100%);
 }
 
 .movieCard:hover {
-  scale: 1.04;
+  scale: 1.03;
+  transition-duration: 0.3s;
   cursor: pointer;
+  transform-origin: 6%;
 }

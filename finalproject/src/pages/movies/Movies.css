@@ -2,3 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+body footer {
+  margin-top: 260px;
+}
+
+.moviesBody {
+  margin-top: 100px;
+}

@@ -4,7 +4,8 @@ import { BarLoader } from "react-spinners";
 import { Navigate, useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
 import { useAppContext } from "../../context/AppContextProvider";
-import { signInAction } from "../../context/action-creators";
+import { signInAction } from "../../context/appContextReducer/actions/action-creators";
+import { useFormik } from "formik";
 import "./signIn.css";
 const SignInForm = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const SignInForm = () => {
     SignIn(user)
       .then((data) => {
         dispatch(signInAction(data.token));
-        navigate(routes.movies);
+        navigate(routes.home);
       })
       .catch((err) => {
         console.log(err);
@@ -39,8 +40,10 @@ const SignInForm = () => {
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
+          id="userName"
           name="userName"
           placeholder="UserName"
+          required={true}
         ></input>
       </div>
       <div>
@@ -51,18 +54,20 @@ const SignInForm = () => {
           type="password"
           name="password"
           placeholder="Password"
+          required={true}
         ></input>
       </div>
       <div>
         <button onClick={clickHandler}>Sign In</button>
       </div>
-      <div className="signInLoader">
-        <div className="Loader">
-          {isLoading && (
-            <BarLoader color="#36d7b7" speedMultiplier={0.5} width={300} />
-          )}
-        </div>
-      </div>
+      <button
+        style={{ backgroundColor: "rgba(12, 163, 163, 0.315)" }}
+        onClick={() => {
+          navigate(routes.signUp);
+        }}
+      >
+        Sign Up
+      </button>
     </div>
   );
 };

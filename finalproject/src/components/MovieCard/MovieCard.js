@@ -8,11 +8,13 @@ const MovieCard = ({ result }) => {
   return (
     <div
       className="movieCard
+      
     "
     >
       <img alt="Movie-IMG" src={result.image} height="250px" />
       <h4>{result.title}</h4>
       <button
+        style={{ cursor: "pointer", marginBottom: "5px" }}
         onClick={() => {
           navigate(`${routes.movies}/${result.id}`);
         }}

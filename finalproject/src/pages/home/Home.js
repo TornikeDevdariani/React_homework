@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
 import { useAppContext } from "../../context/AppContextProvider";
-import { signOutAction } from "../../context/action-creators";
 import "./Home.css";
+import SimpleSlider from "../../components/slider/Slider";
 const Home = () => {
   const navigate = useNavigate();
   const {
@@ -12,7 +12,15 @@ const Home = () => {
   } = useAppContext();
   return (
     <div>
-      <h2 style={{ textShadow: "0px 0px 2px" }}>Home Movie Theatre</h2>
+      <h2
+        style={{
+          textAlign: "center",
+          marginTop: "100px",
+          textShadow: "0px 0px 2px",
+        }}
+      >
+        Home Movie Theatre
+      </h2>
 
       {!isUserLogged ? (
         <div className="signInDiv">
@@ -39,7 +47,9 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <div></div>
+        <div>
+          <SimpleSlider />
+        </div>
       )}
     </div>
   );

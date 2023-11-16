@@ -6,7 +6,13 @@ import SignUp from "../pages/signup/SignUp";
 import NotFound from "../pages/notfound/NotFound";
 import AuthGuard from "../guards/authGuard";
 import Series from "../pages/series/Series";
+import DetailPage from "../pages/detailPage/DetailPage";
 export const appRoutes = [
+  {
+    path: routes.detailPage,
+    component: DetailPage,
+    Guard: AuthGuard,
+  },
   {
     path: routes.home,
     component: Home,

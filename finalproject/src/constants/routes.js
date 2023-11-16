@@ -1,5 +1,6 @@
 const home = "/";
 const movies = "/movies";
+const detailPage = `/movies/:movieID`;
 const signUp = "/signUp";
 const signIn = "/signIn";
 const notFound = "*";
@@ -11,6 +12,7 @@ const routes = {
   signIn,
   notFound,
   series,
+  detailPage,
 };
 
 export default routes;

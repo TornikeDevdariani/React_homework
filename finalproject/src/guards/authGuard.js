@@ -20,6 +20,14 @@ const AuthGuard = ({ children }) => {
         >
           Sign In
         </button>
+        <button
+          style={{ backgroundColor: "rgba(12, 163, 163, 0.315)" }}
+          onClick={() => {
+            navigate(routes.signUp);
+          }}
+        >
+          Sign Up
+        </button>
       </div>
     );
   }

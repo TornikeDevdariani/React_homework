@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
 import { useAppContext } from "../../context/AppContextProvider";
-import { signOutAction } from "../../context/action-creators";
+import { signOutAction } from "../../context/appContextReducer/actions/action-creators";
 import "./navBar.css";
 const Navbar = () => {
   const navigate = useNavigate();
@@ -36,6 +36,7 @@ const Navbar = () => {
             Series
           </button>
         </div>
+
         <div className="rightnav">
           {!isUserLogged ? (
             <div className="rightNavLoggedOut">
@@ -58,7 +59,7 @@ const Navbar = () => {
             </div>
           ) : (
             <div style={{ display: "flex" }} className="rightNavLogged">
-              <p>{user.userName}</p>
+              <p id="userNameTag">{user.userName}</p>
               <button
                 id="signOutBtn"
                 onClick={() => {

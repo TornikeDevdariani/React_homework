@@ -4,6 +4,8 @@ import { BarLoader } from "react-spinners";
 import { Navigate, useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
 import "./SignUp.css";
+// import { useFormik } from "formik";
+// import Validation from "../validation/Validation";
 const SignUpForm = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
@@ -21,13 +23,13 @@ const SignUpForm = () => {
         // console.log(data);
       })
       .catch((err) => {
-        alert("User already exists!");
+        alert("Something went wrong. Please try again!");
         console.log(err);
       });
   };
   console.log(user);
   return (
-    <div
+    <form
       className="signUpFormDiv"
       style={{ display: "flex", flexDirection: "column" }}
     >
@@ -38,6 +40,8 @@ const SignUpForm = () => {
           }}
           name="userName"
           placeholder="UserName"
+          required={true}
+          id="userName"
         ></input>
       </div>
       <div>
@@ -45,8 +49,11 @@ const SignUpForm = () => {
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
+          id="email"
+          type="email"
           name="email"
           placeholder="Email"
+          required={true}
         ></input>
       </div>
       <div>
@@ -54,9 +61,11 @@ const SignUpForm = () => {
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
+          id="password"
           type="password"
           name="password"
           placeholder="Password"
+          required={true}
         ></input>
       </div>
       <div>
@@ -67,7 +76,7 @@ const SignUpForm = () => {
           <BarLoader color="#36d7b7" speedMultiplier={0.5} width={300} />
         )}
       </div>
-    </div>
+    </form>
   );
 };
 
